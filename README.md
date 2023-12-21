@@ -1,7 +1,5 @@
 # gudlift-registration
 
-#test 2
-
 1. Why
 
 
