@@ -29,6 +29,7 @@ def index():
 @app.route('/showSummary', methods=['POST'])
 def showSummary():
     try:
+        # nothing to change, just put an email among clubs.json to identify correctly
         club = [club for club in clubs if club['email'] == request.form['email']][0]
         return render_template('welcome.html', club=club, competitions=competitions)
     except IndexError:
