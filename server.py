@@ -48,7 +48,7 @@ def purchasePlaces():
     competition = [c for c in competitions if c['name'] == request.form['competition']][0]
     club = [c for c in clubs if c['name'] == request.form['club']][0]
     placesRequired = int(request.form['places'])
-    if not(placesRequired <= 12):
+    if not(placesRequired <= int(competition['numberOfPlaces'])):
         abort(401, description="Please verify the number of places and your available points")
     competition['numberOfPlaces'] = int(competition['numberOfPlaces']) - placesRequired
     club['points'] = int(club['points']) - placesRequired
