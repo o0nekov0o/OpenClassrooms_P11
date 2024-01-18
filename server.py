@@ -51,7 +51,6 @@ def purchasePlaces():
     if not(placesRequired <= int(club['points'])):
         abort(401, description="Please verify the number of places and your available points")
     competition['numberOfPlaces'] = int(competition['numberOfPlaces']) - placesRequired
-    club['points'] = int(club['points']) - placesRequired
     flash(f'Booking complete, {placesRequired} places bought')
     return render_template('welcome.html', club=club, competitions=competitions)
 
