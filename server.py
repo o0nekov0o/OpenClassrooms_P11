@@ -1,5 +1,5 @@
 import json
-from flask import Flask, abort, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect, flash, url_for
 
 
 def loadClubs():
@@ -48,8 +48,6 @@ def purchasePlaces():
     competition = [c for c in competitions if c['name'] == request.form['competition']][0]
     club = [c for c in clubs if c['name'] == request.form['club']][0]
     placesRequired = int(request.form['places'])
-    if not(placesRequired <= int(club['points'])):
-        abort(401, description="Please verify the number of places and your available points")
     competition['numberOfPlaces'] = int(competition['numberOfPlaces']) - placesRequired
     club['points'] = int(club['points']) - placesRequired
     flash(f'Booking complete, {placesRequired} places bought')
