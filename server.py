@@ -44,8 +44,7 @@ def book(competition, club):
 
 
 def checkPlaces(placesRequired, numberOfPlaces, points):
-    return (placesRequired <= 12 and placesRequired <= int(numberOfPlaces)
-            and placesRequired <= int(points))
+    return placesRequired <= 12 and placesRequired <= int(numberOfPlaces) and placesRequired <= int(points)
 
 
 @app.route('/purchasePlaces', methods=['POST'])
