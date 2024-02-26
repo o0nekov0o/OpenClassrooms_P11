@@ -1,5 +1,5 @@
 import json
-from flask import Flask, abort, render_template, request, redirect, flash, url_for
+from flask import Flask, abort, render_template, request, redirect, flash, url_fo
 
 
 def loadClubs():
