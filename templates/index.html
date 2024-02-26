@@ -12,13 +12,12 @@
         <input type="email" name="email" id=""/>
         <button type="submit">Enter</button>
     </form>
-    <h3>Competitions:</h3>
+    <h3>Points Available for Each Club</h3>
     <ul>
-        {% for comp in competitions%}
+        {% for club in clubs%}
         <li>
-            {{comp['name']}}<br />
-            Date: {{comp['date']}}</br>
-            Number of Places: {{comp['numberOfPlaces']}}
+            {{club['name']}}<br />
+            Number of Points: {{club['points']}}
         </li>
         <hr />
         {% endfor %}
