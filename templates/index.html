@@ -12,5 +12,15 @@
         <input type="email" name="email" id=""/>
         <button type="submit">Enter</button>
     </form>
+    <h3>Points Available for Each Club:</h3>
+    <ul>
+        {% for club in clubs%}
+        <li>
+            {{club['name']}}<br />
+            Number of Points: {{club['points']}}
+        </li>
+        <hr />
+        {% endfor %}
+    </ul>
 </body>
 </html>
