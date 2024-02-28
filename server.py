@@ -23,7 +23,7 @@ clubs = loadClubs()
 
 @app.route('/')
 def index():
-    return render_template('index.html', clubs=clubs)
+    return render_template('index.html', club=clubs)
 
 
 @app.route('/showSummary', methods=['POST'])
