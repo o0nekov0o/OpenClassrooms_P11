@@ -1,2 +1,2 @@
 [run]
-omit = test_integrations.py, test_unitaires_add.py
+omit = test_integrations.py, test_locust.py, test_unitaires_add.py
