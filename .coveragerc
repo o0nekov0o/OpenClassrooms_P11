@@ -1,0 +1,2 @@
+[run]
+omit = test_integrations.py, test_unitaires_add.py
